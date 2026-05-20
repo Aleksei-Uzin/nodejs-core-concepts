@@ -1,0 +1,50 @@
+{
+  "name": "nodejs-core-concepts",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky && husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksei-Uzin/nodejs-core-concepts.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Aleksei Uzin <aleksei.uzin@gmail.com>",
+  "license": "ISC",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Aleksei-Uzin/nodejs-core-concepts/issues"
+  },
+  "homepage": "https://github.com/Aleksei-Uzin/nodejs-core-concepts#readme",
+  "devDependencies": {
+    "@babel/core": "7.29.0",
+    "@babel/preset-env": "7.29.5",
+    "@eslint/js": "10.0.1",
+    "babel-jest": "30.4.1",
+    "eslint": "10.4.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.6.0",
+    "husky": "9.1.7",
+    "jest": "30.4.2",
+    "lint-staged": "16.4.0",
+    "prettier": "3.8.3"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.--write": "prettier --write"
+  }
+}

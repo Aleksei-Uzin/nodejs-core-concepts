@@ -1,4 +1,6 @@
-const Timer = require('./timer');
+import Timer from './Timer.js';
+
+const [duration = 5, pauseAfter = 3, resumeAfter = 5] = process.argv.slice(2).map(Number);
 
 const onTick = remaining => {
   console.log(`Tick: ${remaining} seconds remaining`);
@@ -22,14 +24,14 @@ function timer(timer) {
   setTimeout(() => {
     console.log('Timer paused');
     timer.pause();
-  }, 3000);
+  }, pauseAfter * 1000);
 
   setTimeout(() => {
     console.log('Timer resumed');
     timer.resume();
-  }, 5000);
+  }, resumeAfter * 1000);
 
   timer.start();
 }
 
-timer(new Timer(5));
+timer(new Timer(duration));

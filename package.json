@@ -1,17 +1,16 @@
 {
   "name": "nodejs-core-concepts",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hands-on projects for learning Node.js core concepts",
   "private": true,
+  "type": "module",
   "scripts": {
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "prepare": "husky && husky install"
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -24,27 +23,21 @@
   "author": "Aleksei Uzin <aleksei.uzin@gmail.com>",
   "license": "ISC",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=22.18.0"
   },
   "bugs": {
     "url": "https://github.com/Aleksei-Uzin/nodejs-core-concepts/issues"
   },
   "homepage": "https://github.com/Aleksei-Uzin/nodejs-core-concepts#readme",
   "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@babel/preset-env": "7.29.5",
+    "@babel/core": "8.0.1",
+    "@babel/preset-env": "8.0.2",
     "@eslint/js": "10.0.1",
-    "babel-jest": "30.4.1",
+    "babel-jest": "30.5.1",
     "eslint": "10.4.0",
     "eslint-config-prettier": "10.1.8",
-    "globals": "17.6.0",
-    "husky": "9.1.7",
+    "globals": "17.12.0",
     "jest": "30.4.2",
-    "lint-staged": "16.4.0",
     "prettier": "3.8.3"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.--write": "prettier --write"
   }
 }

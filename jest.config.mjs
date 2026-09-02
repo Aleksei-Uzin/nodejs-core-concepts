@@ -12,8 +12,8 @@ const config = {
   // Don't collect coverage (disabled for performance)
   collectCoverage: false,
 
-  // Only look for test files in src/ directory
-  testMatch: ['**/src/**/*.test.js'],
+  // Look for test files in tests/ directories
+  testMatch: ['**/tests/**/*.test.js'],
 
   // Run tests in Node.js environment
   testEnvironment: 'node',
@@ -24,16 +24,15 @@ const config = {
   // Watch for changes in test files and source files
   watchPathIgnorePatterns: ['node_modules', 'coverage'],
 
-  // Setup files after the test framework is installed
-  setupFilesAfterEnv: [],
-
-  // Transform JavaScript files with babel-jest
+  // Transform ESM syntax to CommonJS for Jest's runtime.
   transform: {
-    '^.+\\.js$': 'babel-jest',
+    '^.+\\.m?js$': [
+      'babel-jest',
+      {
+        presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+      },
+    ],
   },
-
-  // Don't transform node_modules
-  transformIgnorePatterns: ['node_modules/(?!(.*))'],
 };
 
-module.exports = config;
+export default config;

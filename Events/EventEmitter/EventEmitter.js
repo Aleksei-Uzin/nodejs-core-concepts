@@ -1,4 +1,4 @@
-class EventEmitter {
+export default class EventEmitter {
   listeners = {};
 
   addListener(eventName, fn) {
@@ -63,5 +63,3 @@ class EventEmitter {
     return this.listeners[eventName];
   }
 }
-
-module.exports = EventEmitter;

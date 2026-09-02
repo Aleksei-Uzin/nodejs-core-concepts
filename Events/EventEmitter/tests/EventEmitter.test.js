@@ -1,4 +1,4 @@
-const EventEmitter = require('../EventEmitter');
+import EventEmitter from '../EventEmitter';
 
 describe('EventEmitter', () => {
   let emitter;

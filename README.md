@@ -2,11 +2,16 @@
 
 Hands-on examples for learning Node.js core concepts.
 
-## Events
+## Concepts
+
+### Events
 
 - [EventEmitter implementation](./Events/EventEmitter/)
-
 - [Timer](./Events/Timer/)
+
+### Buffer
+
+- [Binary File Inspector](./Buffer/)
 
 ## Getting Started
 

@@ -13,6 +13,10 @@ Hands-on examples for learning Node.js core concepts.
 
 - [Binary File Inspector](./Buffer/)
 
+### File system
+
+- [Command watcher](./FileSystem/)
+
 ## Getting Started
 
 **Prerequisites:** Node.js `22.18`+
@@ -33,7 +37,7 @@ npm install
 
 - `npm run lint` - check the project with ESLint.
 
-- `npm run lint:fix` - atomatically fix ESLint issues where possible.
+- `npm run lint:fix` - automatically fix ESLint issues where possible.
 
 - `npm run format` - format the project with Prettier.
 

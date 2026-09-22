@@ -3,26 +3,8 @@ import { open } from 'node:fs/promises';
 import { once } from 'node:events';
 
 const FILE_NAME = './source.txt';
-const DEFAULT_SIZE_MB = 20;
 
-function getSizeInMegabytes() {
-  const arg = process.argv.find(arg => arg.startsWith('--size='));
-
-  if (!arg) {
-    return DEFAULT_SIZE_MB;
-  }
-
-  const size = Number(arg.split('=')[1]);
-
-  if (!Number.isFinite(size) || size <= 0) {
-    throw new Error('Size must be a positive number.');
-  }
-
-  return size;
-}
-
-async function generateSourceFile() {
-  const sizeMB = getSizeInMegabytes();
+async function generateSourceFile(sizeMB) {
   const targetSize = sizeMB * 1024 * 1024;
 
   const fileHandle = await open(FILE_NAME, 'w');
@@ -49,4 +31,4 @@ async function generateSourceFile() {
   console.log(`Created ${FILE_NAME} ${(size / 1024 / 1024).toFixed(2)} MB`);
 }
 
-await generateSourceFile();
+export default generateSourceFile;

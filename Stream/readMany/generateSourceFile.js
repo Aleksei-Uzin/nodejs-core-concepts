@@ -3,7 +3,7 @@ import { open } from 'node:fs/promises';
 import { once } from 'node:events';
 
 const FILE_NAME = './source.txt';
-const DEFAULT_SIZE_MB = 79;
+const DEFAULT_SIZE_MB = 20;
 
 function getSizeInMegabytes() {
   const arg = process.argv.find(arg => arg.startsWith('--size='));

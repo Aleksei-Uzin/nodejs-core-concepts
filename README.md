@@ -19,7 +19,8 @@ Hands-on examples for learning Node.js core concepts.
 
 ### Stream
 
-- [Write Many - File Writing Performance Comparison](./Stream/writeMany/)
+- [`writeMany` - File Writing Performance Comparison](./Stream/writeMany/)
+- [`readMany` - Stream Processing](./Stream/readMany/)
 
 ## Getting Started
 

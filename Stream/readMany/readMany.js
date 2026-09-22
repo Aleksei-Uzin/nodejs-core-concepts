@@ -1,6 +1,6 @@
 import { open } from 'node:fs/promises';
 
-(async () => {
+async function readMany() {
   const fileHandleRead = await open('./source.txt', 'r');
   const fileHandleWrite = await open('./dest.txt', 'w');
 
@@ -45,6 +45,8 @@ import { open } from 'node:fs/promises';
     await fileHandleRead.close();
     await fileHandleWrite.close();
 
-    console.log('Done');
+    console.log('Done Reading');
   });
-})();
+}
+
+export default readMany;

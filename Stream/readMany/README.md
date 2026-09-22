@@ -1,6 +1,6 @@
 # `readMany` Stream Processing
 
-A Node.js scripts demonstrating file generation and stream-based processing using backpressure handling.
+A Node.js example demonstrating file generation and stream-based processing with backpressure handling.
 
 ## How to Run
 
@@ -10,27 +10,17 @@ From the project root:
 cd Stream/readMany
 ```
 
-### 1. Generate the source file
+Run the entry point to generate and process a source file:
 
 ```bash
-node generateSourceFile.js
+node index.js
 ```
 
-[generateSourceFile.js](./generateSourceFile.js) generates a `source.txt` file with a default size of **20 MB**, containing sequential integers starting from `0`, each on its own line.
-
-To specify a custom size in `megabytes`:
+The default source file size is **20 MB**. To specify a custom size in megabytes:
 
 ```bash
-node generateSourceFile.js --size=150
+node index.js --size=150
 ```
-
-### 2. Process the file
-
-```bash
-node readMany.js
-```
-
-[readMany.js](./readMany.js) reads the generated `source.txt` as a stream, filters every number divisible by 10, and writes the results to `dest.txt`.
 
 ## Notes
 

@@ -24,4 +24,4 @@ node index.js --size=150
 
 ## Notes
 
-- `copyFile.js` uses a single pre-allocated 16 KB buffer and sequential `read`/`write` calls rather than streams, giving explicit control over chunk size and I/O ordering.
+- [copyFile.js](./copyFile.js) uses a single pre-allocated 16 KB buffer and sequential `read`/`write` calls rather than streams, giving explicit control over chunk size and I/O ordering.

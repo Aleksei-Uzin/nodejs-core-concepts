@@ -24,4 +24,4 @@ node index.js --size=150
 
 ## Notes
 
-- `readMany.js` uses manual `pause()`/`resume()` flow control rather than `pipe()` to allow per-line transformation logic between the read and write streams.
+- [readMany.js](./readMany.js) uses manual `pause()`/`resume()` flow control rather than `pipe()` to allow per-line transformation logic between the read and write streams.

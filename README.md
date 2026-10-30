@@ -22,6 +22,9 @@ Hands-on examples for learning Node.js core concepts.
 - [`writeMany` - File Writing Performance Comparison](./Stream/writeMany/)
 - [`readMany` - Stream Processing](./Stream/readMany/)
 - [`fileCopy` - Low-Level File Copy](./Stream/fileCopy/)
+- [`customWritable` - Custom Writable File Stream](./Stream/customWritable/)
+
+### Networking
 
 ## Getting Started
 
